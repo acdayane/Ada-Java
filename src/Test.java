@@ -1,4 +1,4 @@
-public class App {
+public class Test {
 
     static String[][] peopleData = new String[][]{ 
         {"Ana", "Paulo", "Márcia", "Pedro",  "Beatriz"},
