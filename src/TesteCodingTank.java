@@ -1,4 +1,4 @@
-public class Test {
+public class TesteCodingTank {
 
     static String[][] peopleData = new String[][]{ 
         {"Ana", "Paulo", "Márcia", "Pedro",  "Beatriz"},
