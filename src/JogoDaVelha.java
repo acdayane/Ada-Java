@@ -14,14 +14,8 @@ public class JogoDaVelha {
         System.out.println("Jogo da Velha");
 
         while (numberOfTurn <= 9) {
-
-            for (int i=0; i<matriz.length; i++) {
-                for (int j=0; j<matriz[i].length; j++) {
-                    System.out.print(matriz[i][j]);
-                }
-               System.out.println("");
-            }
-    
+            printGame();
+   
             if (player1Turn == true) {
                 System.out.println("Jogador 1: Insira o número da linha em que deseja jogar (1 a 3): ");
                 line = scanner.nextInt();
@@ -70,12 +64,7 @@ public class JogoDaVelha {
         if (matriz[0][2].equals(matriz[1][1]) && matriz[0][2].equals(matriz[2][0]) && !matriz[0][2].equals("- ")) winnerExist = true;
 
         if (winnerExist == true) {
-            for (int i=0; i<matriz.length; i++) {
-                for (int j=0; j<matriz[i].length; j++) {
-                    System.out.print(matriz[i][j]);
-                }
-                System.out.println(" ");
-            }
+            printGame();
 
             if (player1Turn == true) {
                 System.out.println("Jogador 1 é o vencedor!");
@@ -98,5 +87,14 @@ public class JogoDaVelha {
         } else {
             return false;
         }
-    }    
+    } 
+    
+    private static void printGame() {
+        for (int i=0; i<matriz.length; i++) {
+            for (int j=0; j<matriz[i].length; j++) {
+                System.out.print(matriz[i][j]);
+            }
+           System.out.println("");
+        }
+    }
 }
